@@ -15,6 +15,7 @@
 // ViewControllers
 #import "QBImagePickerController.h"
 #import "QBAssetsViewController.h"
+#import "QBImagePickerTranslation.h"
 
 static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     return CGSizeMake(size.width * scale, size.height * scale);
@@ -29,6 +30,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 @interface QBAlbumsViewController () <PHPhotoLibraryChangeObserver>
 
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
 
 @property (nonatomic, copy) NSArray *fetchResults;
 @property (nonatomic, copy) NSArray *assetCollections;
@@ -57,10 +59,12 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     // Configure navigation item
-    self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"albums.title", @"QBImagePicker", self.imagePickerController.assetBundle, nil);
+    self.navigationItem.title = QBTranslation(@"qbimagepicker_title");
     self.navigationItem.prompt = self.imagePickerController.prompt;
+    [self.doneButton setTitle:QBTranslation(@"qbimagepicker_done_button")];
+    [self.cancelButton setTitle:QBTranslation(@"qbimagepicker_done_cancel")];
     
     // Show/hide 'Done' button
     if (self.imagePickerController.allowsMultipleSelection) {
@@ -131,14 +135,12 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     NSMutableOrderedSet *selectedAssets = self.imagePickerController.selectedAssets;
     
     if (selectedAssets.count > 0) {
-        NSBundle *bundle = self.imagePickerController.assetBundle;
         NSString *format;
         if (selectedAssets.count > 1) {
-            format = NSLocalizedStringFromTableInBundle(@"assets.toolbar.items-selected", @"QBImagePicker", bundle, nil);
+            format = QBTranslation(@"qbimagepicker_assets_toolbar_items_selected");
         } else {
-            format = NSLocalizedStringFromTableInBundle(@"assets.toolbar.item-selected", @"QBImagePicker", bundle, nil);
+            format = QBTranslation(@"qbimagepicker_assets_toolbar_item_selected");
         }
-        
         NSString *title = [NSString stringWithFormat:format, selectedAssets.count];
         [(UIBarButtonItem *)self.toolbarItems[1] setTitle:title];
     } else {
