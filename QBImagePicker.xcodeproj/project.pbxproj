@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4475E7A11CBA587200DF5A10 /* UnrotatedNavController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4475E79F1CBA587200DF5A10 /* UnrotatedNavController.h */; };
+		4475E7A21CBA587200DF5A10 /* UnrotatedNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4475E7A01CBA587200DF5A10 /* UnrotatedNavController.m */; };
 		4488A1DC1CB95DF900489BCD /* QBImagePickerTranslation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4488A1DA1CB95DF900489BCD /* QBImagePickerTranslation.h */; };
 		4488A1DD1CB95DF900489BCD /* QBImagePickerTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4488A1DB1CB95DF900489BCD /* QBImagePickerTranslation.m */; };
 		790A850F1AE7D4D9008E2A80 /* QBSlomoIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 790A850D1AE7D4D9008E2A80 /* QBSlomoIconView.h */; };
@@ -82,6 +84,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4475E79F1CBA587200DF5A10 /* UnrotatedNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnrotatedNavController.h; sourceTree = "<group>"; };
+		4475E7A01CBA587200DF5A10 /* UnrotatedNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnrotatedNavController.m; sourceTree = "<group>"; };
 		4488A1DA1CB95DF900489BCD /* QBImagePickerTranslation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBImagePickerTranslation.h; sourceTree = "<group>"; };
 		4488A1DB1CB95DF900489BCD /* QBImagePickerTranslation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBImagePickerTranslation.m; sourceTree = "<group>"; };
 		790A850D1AE7D4D9008E2A80 /* QBSlomoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBSlomoIconView.h; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 		AA3AD0761ACFA23300BF523E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4475E79F1CBA587200DF5A10 /* UnrotatedNavController.h */,
+				4475E7A01CBA587200DF5A10 /* UnrotatedNavController.m */,
 				AAA8FE1F1ACDA090002A9710 /* QBImagePickerController.h */,
 				AAA8FE201ACDA090002A9710 /* QBImagePickerController.m */,
 				AAA8FE591ACDA554002A9710 /* QBAlbumsViewController.h */,
@@ -334,6 +340,7 @@
 				AA3AD06F1ACF9A3A00BF523E /* QBVideoIconView.h in Headers */,
 				4488A1DC1CB95DF900489BCD /* QBImagePickerTranslation.h in Headers */,
 				AAA8FE091ACDA079002A9710 /* QBImagePicker.h in Headers */,
+				4475E7A11CBA587200DF5A10 /* UnrotatedNavController.h in Headers */,
 				AABBF0901ACEDDFF003188A3 /* QBCheckmarkView.h in Headers */,
 				AAA8FE211ACDA090002A9710 /* QBImagePickerController.h in Headers */,
 			);
@@ -511,6 +518,7 @@
 				AAA8FE221ACDA090002A9710 /* QBImagePickerController.m in Sources */,
 				AA3AD0741ACFA06700BF523E /* QBVideoIndicatorView.m in Sources */,
 				AAA8FE5C1ACDA554002A9710 /* QBAlbumsViewController.m in Sources */,
+				4475E7A21CBA587200DF5A10 /* UnrotatedNavController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

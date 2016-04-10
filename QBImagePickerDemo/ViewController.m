@@ -30,6 +30,8 @@
     imagePickerController.mediaType = QBImagePickerMediaTypeAny;
     imagePickerController.allowsMultipleSelection = (indexPath.section == 1);
     imagePickerController.showsNumberOfSelectedAssets = YES;
+    imagePickerController.shouldAutorotate = YES;
+    imagePickerController.supportedInterfaceOrientations = UIInterfaceOrientationMaskAll;
     
     if (indexPath.section == 1) {
         switch (indexPath.row) {

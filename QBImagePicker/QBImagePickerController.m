@@ -11,10 +11,11 @@
 
 // ViewControllers
 #import "QBAlbumsViewController.h"
+#import "UnrotatedNavController.h"
 
 @interface QBImagePickerController ()
 
-@property (nonatomic, strong) UINavigationController *albumsNavigationController;
+@property (nonatomic, strong) UnrotatedNavController *albumsNavigationController;
 
 @property (nonatomic, strong) NSBundle *assetBundle;
 
@@ -33,7 +34,8 @@
                                          @(PHAssetCollectionSubtypeAlbumMyPhotoStream),
                                          @(PHAssetCollectionSubtypeSmartAlbumPanoramas),
                                          @(PHAssetCollectionSubtypeSmartAlbumVideos),
-                                         @(PHAssetCollectionSubtypeSmartAlbumBursts)
+                                         @(PHAssetCollectionSubtypeSmartAlbumBursts),
+                                         @(PHAssetCollectionSubtypeSmartAlbumSelfPortraits)
                                          ];
         self.minimumNumberOfSelection = 1;
         self.numberOfColumnsInPortrait = 4;
@@ -62,7 +64,7 @@
 {
     // Add QBAlbumsViewController as a child
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"QBImagePicker" bundle:self.assetBundle];
-    UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"QBAlbumsNavigationController"];
+    UnrotatedNavController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"QBAlbumsNavigationController"];
     
     [self addChildViewController:navigationController];
     

@@ -6,16 +6,19 @@
   Copyright (c) 2015 Katsuma Tanaka. All rights reserved.
 */
 
-"albums.title" = "Photos";
+"qbimagepicker_title"                       = "Photos";
 
-"assets.footer.photo" = "%ld Photo";
-"assets.footer.photos" = "%ld Photos";
-"assets.footer.video" = "%ld Video";
-"assets.footer.videos" = "%ld Videos";
-"assets.footer.photo-and-video" = "%ld Photo, %ld Video";
-"assets.footer.photos-and-video" = "%ld Photos, %ld Video";
-"assets.footer.photo-and-videos" = "%ld Photo, %ld Videos";
-"assets.footer.photos-and-videos" = "%ld Photos, %ld Videos";
+"qbimagepicker_format_photo"                = "%ld Photo";
+"qbimagepicker_format_photos"               = "%ld Photos";
+"qbimagepicker_format_video"                = "%ld Video";
+"qbimagepicker_format_videos"               = "%ld Videos";
+"qbimagepicker_format_photo_and_video"      = "%ld Photo, %ld Video";
+"qbimagepicker_format_photos_and_video"     = "%ld Photos, %ld Video";
+"qbimagepicker_format_photo_and_videos"     = "%ld Photo, %ld Videos";
+"qbimagepicker_format_photos_and_videos"    = "%ld Photos, %ld Videos";
 
-"assets.toolbar.item-selected" = "%ld Item Selected";
-"assets.toolbar.items-selected" = "%ld Items Selected";
+"qbimagepicker_assets_toolbar_item_selected"              = "%ld Item Selected";// TODO: add new transaltion in admin
+"qbimagepicker_assets_toolbar_items_selected"             = "%ld Items Selected";// TODO: add new transaltion in admin
+
+"qbimagepicker_done_button"                 = "Done";
+"qbimagepicker_done_cancel"                 = "Cancel";
