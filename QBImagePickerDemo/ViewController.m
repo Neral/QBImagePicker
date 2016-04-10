@@ -32,6 +32,7 @@
     imagePickerController.showsNumberOfSelectedAssets = YES;
     imagePickerController.shouldAutorotate = YES;
     imagePickerController.supportedInterfaceOrientations = UIInterfaceOrientationMaskAll;
+    imagePickerController.showsEmptySmartAlbums = NO;
     
     if (indexPath.section == 1) {
         switch (indexPath.row) {

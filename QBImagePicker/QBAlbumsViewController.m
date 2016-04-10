@@ -165,6 +165,12 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
             if (subtype == PHAssetCollectionSubtypeAlbumRegular) {
                 [userAlbums addObject:assetCollection];
             } else if ([assetCollectionSubtypes containsObject:@(subtype)]) {
+                if (self.imagePickerController.showsEmptySmartAlbums == NO) {
+                    PHFetchResult *assetsFetchResult = [PHAsset fetchAssetsInAssetCollection:assetCollection options:nil];
+                    if (assetsFetchResult.count == 0) {
+                        return;
+                    }
+                }
                 if (!smartAlbums[@(subtype)]) {
                     smartAlbums[@(subtype)] = [NSMutableArray array];
                 }
