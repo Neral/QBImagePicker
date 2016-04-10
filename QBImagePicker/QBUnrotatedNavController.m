@@ -1,10 +1,10 @@
-#import "UnrotatedNavController.h"
+#import "QBUnrotatedNavController.h"
 
-@interface UnrotatedNavController ()
+@interface QBUnrotatedNavController ()
 
 @end
 
-@implementation UnrotatedNavController
+@implementation QBUnrotatedNavController
 
 - (void)viewDidLoad
 {

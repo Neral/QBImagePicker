@@ -11,11 +11,11 @@
 
 // ViewControllers
 #import "QBAlbumsViewController.h"
-#import "UnrotatedNavController.h"
+#import "QBUnrotatedNavController.h"
 
 @interface QBImagePickerController ()
 
-@property (nonatomic, strong) UnrotatedNavController *albumsNavigationController;
+@property (nonatomic, strong) QBUnrotatedNavController *albumsNavigationController;
 
 @property (nonatomic, strong) NSBundle *assetBundle;
 
@@ -64,7 +64,7 @@
 {
     // Add QBAlbumsViewController as a child
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"QBImagePicker" bundle:self.assetBundle];
-    UnrotatedNavController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"QBAlbumsNavigationController"];
+    QBUnrotatedNavController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"QBAlbumsNavigationController"];
     
     [self addChildViewController:navigationController];
     

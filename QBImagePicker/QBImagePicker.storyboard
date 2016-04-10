@@ -273,7 +273,7 @@
         <!--Unrotated Nav Controller-->
         <scene sceneID="TBV-v4-1AQ">
             <objects>
-                <navigationController storyboardIdentifier="QBAlbumsNavigationController" id="8Dq-FL-Kai" customClass="UnrotatedNavController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="QBAlbumsNavigationController" id="8Dq-FL-Kai" customClass="QBUnrotatedNavController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Whc-Ry-EBq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
