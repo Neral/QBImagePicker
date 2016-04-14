@@ -43,7 +43,17 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 {
     [super viewDidLoad];
     
+    self.tableView.backgroundView = self.imagePickerController.authorizationView;
     [self setUpToolbarItems];
+    
+    // Request gallery access
+    if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusNotDetermined) {
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self showAuthorizationViewIfNeeded];
+            });
+        }];
+    }
     
     // Fetch user albums and smart albums
     PHFetchResult *smartAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAny options:nil];
@@ -75,6 +85,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     
     [self updateControlState];
     [self updateSelectionInfo];
+    [self showAuthorizationViewIfNeeded];
 }
 
 - (void)dealloc
@@ -82,7 +93,6 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     // Deregister observer
     [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:self];
 }
-
 
 #pragma mark - Storyboard
 
@@ -267,6 +277,12 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     self.doneButton.enabled = [self isMinimumSelectionLimitFulfilled];
 }
 
+#pragma mark - Authorization View
+
+- (void)showAuthorizationViewIfNeeded
+{
+    [self.tableView.backgroundView setHidden:([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusDenied ? NO : YES)];
+}
 
 #pragma mark - UITableViewDataSource
 
@@ -377,6 +393,9 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 - (void)photoLibraryDidChange:(PHChange *)changeInstance
 {
     dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [self showAuthorizationViewIfNeeded];
+        
         // Update fetch results
         NSMutableArray *fetchResults = [self.fetchResults mutableCopy];
         
