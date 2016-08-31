@@ -71,7 +71,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     [super viewWillAppear:animated];
 
     // Configure navigation item
-    self.navigationItem.title = QBTranslation(@"qbimagepicker_title");
+    self.navigationItem.title = [self titleForCurrentType];
     self.navigationItem.prompt = self.imagePickerController.prompt;
     [self.doneButton setTitle:QBTranslation(@"qbimagepicker_done_button")];
     [self.cancelButton setTitle:QBTranslation(@"qbimagepicker_done_cancel")];
@@ -86,6 +86,11 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     [self updateControlState];
     [self updateSelectionInfo];
     [self showAuthorizationViewIfNeeded];
+}
+
+- (NSString *)titleForCurrentType
+{
+    return self.imagePickerController.mediaType == QBImagePickerMediaTypeVideo ? QBTranslation(@"qbimagepicker_video_title") : QBTranslation(@"qbimagepicker_title");
 }
 
 - (void)dealloc
