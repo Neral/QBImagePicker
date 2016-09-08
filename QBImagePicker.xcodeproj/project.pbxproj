@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4475E7A11CBA587200DF5A10 /* QBUnrotatedNavController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4475E79F1CBA587200DF5A10 /* QBUnrotatedNavController.h */; };
 		4475E7A21CBA587200DF5A10 /* QBUnrotatedNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4475E7A01CBA587200DF5A10 /* QBUnrotatedNavController.m */; };
-		4488A1DC1CB95DF900489BCD /* QBImagePickerTranslation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4488A1DA1CB95DF900489BCD /* QBImagePickerTranslation.h */; };
+		4488A1DC1CB95DF900489BCD /* QBImagePickerTranslation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4488A1DA1CB95DF900489BCD /* QBImagePickerTranslation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4488A1DD1CB95DF900489BCD /* QBImagePickerTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4488A1DB1CB95DF900489BCD /* QBImagePickerTranslation.m */; };
 		790A850F1AE7D4D9008E2A80 /* QBSlomoIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 790A850D1AE7D4D9008E2A80 /* QBSlomoIconView.h */; };
 		790A85101AE7D4D9008E2A80 /* QBSlomoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 790A850E1AE7D4D9008E2A80 /* QBSlomoIconView.m */; };
