@@ -52,7 +52,6 @@ typedef NS_ENUM(NSUInteger, QBImagePickerMediaType) {
 
 @property (nonatomic, assign) BOOL shouldAutorotate;
 @property (nonatomic, assign) UIInterfaceOrientationMask supportedInterfaceOrientations;
-@property (nonatomic, assign) UIStatusBarStyle preferredStatusBarStyle;
 @property (nonatomic) UIView *authorizationView;
 
 @end
